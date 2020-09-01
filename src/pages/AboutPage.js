@@ -1,5 +1,9 @@
 import React from "react";
+
+// importing img
 import img from "../assets/images/img1.jpg";
+
+// importing Button component
 import Button from "../components/Button";
 
 const AboutPage = () => {
@@ -8,10 +12,17 @@ const AboutPage = () => {
             <div className="row">
                 <div className="card mb-3">
                     <div className="row no-gutters d-flex align-items-center">
-                        <div className="col-md-6 hide">
-                            <img src={img} className="card-img" alt="..." />
+                        {/* img to show in small screen */}
+                        <div className="col-lg-6 show">
+                            <img
+                                src={img}
+                                className="card-img img-crop"
+                                alt="..."
+                            />
                         </div>
-                        <div className="col-md-6 ">
+
+                        {/* this is the card text section */}
+                        <div className="col-lg-6 ">
                             <div className="card-body">
                                 <h1 className="mb-5">About</h1>
 
@@ -25,11 +36,18 @@ const AboutPage = () => {
                                     dolore.
                                 </p>
 
+                                {/* Button component */}
                                 <Button path="/" text="back" arrow={true} />
                             </div>
                         </div>
-                        <div className="col-md-6 show">
-                            <img src={img} className="card-img" alt="..." />
+
+                        {/* img to show in large screen */}
+                        <div className="col-lg-6 hide">
+                            <img
+                                src={img}
+                                className="card-img img-crop"
+                                alt="..."
+                            />
                         </div>
                     </div>
                 </div>

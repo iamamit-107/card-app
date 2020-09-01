@@ -1,4 +1,6 @@
 import React from "react";
+
+// importing Button component
 import Button from "../components/Button";
 
 const ContactPage = () => {
@@ -6,8 +8,11 @@ const ContactPage = () => {
         <div className="container my-5">
             <div className="row justify-content-center">
                 <div className="col-lg-7 col-md-9">
+                    {/* bitton component */}
                     <Button path="/" text="back" arrow={true} />
-                    <div className="card card-body px-5 mt-5">
+
+                    {/* form box */}
+                    <div className="card card-body px-3 px-md-5 mt-5">
                         <h3 className="mb-4 mt-5 pt-5">CONTACT</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -15,7 +20,9 @@ const ContactPage = () => {
                             condimentum, ac fermentum nibh ullamcorper magna.
                         </p>
 
+                        {/* form section start*/}
                         <form action="">
+                            {/* form group is used to group a label and input */}
                             <div className="form-group">
                                 <label htmlFor="name">Name</label>
                                 <input
@@ -45,10 +52,11 @@ const ContactPage = () => {
                                 ></textarea>
                             </div>
 
-                            <button className="btn btn-common">
+                            <button className="btn btn-common" type="submit">
                                 send message
                             </button>
                         </form>
+                        {/* form section end*/}
                     </div>
                 </div>
             </div>

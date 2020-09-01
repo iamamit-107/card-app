@@ -7,6 +7,10 @@ h1 {
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 1rem;
+
+    @media screen and (max-width: 576px) {
+        font-size: 40px;
+    }
 }
 
 h3 {
@@ -24,8 +28,10 @@ p {
     font-size: 22px;
     font-weight: normal;
     line-height: 3rem;
+    text-align: justify;
 }
 
+// from desing
 label {
     font-size: 18px;
     margin-bottom: 15px;
@@ -48,6 +54,7 @@ label {
     }
 }
 
+// common button design
 .btn-common {
     font-size: 16px;
     font-weight: 700;
@@ -55,6 +62,7 @@ label {
     border: 1px solid #e5e5e5;
     padding: 15px 40px;
     margin-right: 30px;
+    margin-bottom: 20px;
 
     &:hover {
         border-color: darkturquoise;
@@ -76,6 +84,7 @@ label {
     }
 }
 
+// show and hide image
 .show {
     display: none;
     @media screen and (max-width: 768px) {
@@ -87,5 +96,33 @@ label {
     display: block;
     @media screen and (max-width: 768px) {
         display: none;
+    }
+}
+
+// image resizing in small screen
+.img-crop {
+    @media screen and (max-width: 768px) {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+        object-position: center;
+    }
+}
+
+// for footer menu responsive
+.icon-row {
+    .float-lg-left {
+        @media screen and (max-width: 769px) {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    .float-lg-right {
+        @media screen and (max-width: 769px) {
+            p {
+                text-align: center;
+            }
+        }
     }
 }

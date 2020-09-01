@@ -11,6 +11,7 @@ function App() {
     return (
         <>
             <Switch>
+                {/* this is the routing section. using the path we can find that page component */}
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/contact" component={ContactPage} />
